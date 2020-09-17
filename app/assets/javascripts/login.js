@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    const domain = gon.ameoba_junior_student_domain
+    const domain = gon.online_cb_api
     let mobile_no
     let otpClaimId
 
@@ -9,6 +9,7 @@ $(document).ready(function() {
     });
 
     $("body").delegate("#getOtpBtn", "click", async function() {
+
         if ($('#getOtpBtn').html() == 'Proceed') {
             mobile_no = $('#mobile_no').val()
             localStorage.setItem("userMobile", mobile_no)

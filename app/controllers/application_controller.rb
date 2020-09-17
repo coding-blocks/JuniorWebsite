@@ -1,10 +1,10 @@
 class ApplicationController < ActionController::Base
 
-	before_action :ameoba_junior_student_domain
+	before_action :set_cb_online_api_domain
 
-	def ameoba_junior_student_domain
+	def set_cb_online_api_domain
 		gon.push({
-		    :ameoba_junior_student_domain => 'https://online-api.codingblocks.com/api/v2',
+		    :online_cb_api => Rails.application.credentials.dig(:cb_online_api, :domain)
 		})
 	end
 end

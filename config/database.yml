@@ -49,6 +49,6 @@ test:
 #
 production:
   <<: *default
-  database: codingblocks-jr_production
-  username: codingblocks-jr
-  password: <%= ENV['CODINGBLOCKS-JR_DATABASE_PASSWORD'] %>
+  database: <%= Rails.application.credentials.dig(:db_credentials, :database) %>
+  username: <%= Rails.application.credentials.dig(:db_credentials, :username) %>
+  password: <%= Rails.application.credentials.dig(:db_credentials, :password) %>
