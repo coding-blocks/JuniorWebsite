@@ -1,0 +1,78 @@
+<div id="banner-area" class="banner-area" style="background-image: url(<%= asset_path 'banner/banner-img1.jpg' %>)" data-hover-only="true">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="banner-title">Favourite Course ?</h2>
+                <ol class="breadcrumb">
+                    <li><a href="/">Home</a></li>
+                </ol> <!-- Ol End -->
+            </div> <!-- Col End -->
+        </div> <!-- Row End -->
+        <div class="banner-img" id="scene" data-relative-input="true">
+            <img data-depth="0.5" src="<%= asset_path 'banner-pattern.png'%>" alt="" class="img-fluid" id="banner-pattern">
+        </div><!-- Banner Img end -->
+    </div> <!-- Container end -->
+</div>
+<section id="tl-course-carousel" class="tl-course-carousel" style="background-color: aliceblue;">
+    <div class="row d-flex justify-content-center">
+        <h2> Choose your favourite Course!</h2>
+    </div>
+    <div class="row d-flex justify-content-center mt-5">
+        <form id="course_choice_form">
+            <div class="form-body">
+                <div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Select Course</th>
+                                            <th scope="col">Name</th>
+                                            <th scope="col">Grades</th>
+                                            <th scope="col">Start</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <% @courses.each_with_index do |course, index| %>
+                                        <tr id="<%= course['id']%>">
+                                            <td>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" name="course_choice" class="custom-control-input course_choice" id="course_choice-<%=index%>">
+                                                    <label class="custom-control-label" for="course_choice-<%=index%>">
+                                                        <%= index+1 %></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <%= course['name'] %>
+                                            </td>
+                                            <td>
+                                                <%= course['description'] %>
+                                            </td>
+                                            <td>
+                                                <% if  course['fee'].to_i == 0 %>
+                                                    Free
+                                                <% else %>
+                                                    <%= course['fee'].to_i %>
+                                                <% end %>
+                                            </td>
+                                        </tr>
+                                        <% end %>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row d-flex justify-content-center mt-3">
+                <button type="button" class="btn btn-primary" id="submit_course_choice_btn">
+                    Submit
+                </button>
+            </div>
+        </form>
+    </div>
+</section>
+<% content_for :javascript_includes do %>
+<%= javascript_include_tag 'course_choice.js' %>
+<% end %>

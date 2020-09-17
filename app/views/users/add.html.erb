@@ -1,0 +1,68 @@
+<div id="banner-area" class="banner-area" style="background-image: url(<%= asset_path 'banner/banner-img1.jpg'%>)">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="banner-title">Register</h2>
+                <ol class="breadcrumb">
+                    <li><a href="index.html">Home</a></li>
+                    <li>Register</li>
+                </ol> <!-- Ol End -->
+            </div> <!-- Col End -->
+        </div> <!-- Row End -->
+        <div class="banner-img" id="scene" data-relative-input="true">
+            <img data-depth="0.5" src="<%= asset_path 'banner-pattern.png'%>" alt="" class="img-fluid" id="banner-pattern">
+        </div><!-- Banner Img end -->
+    </div> <!-- Container end -->
+</div>
+<!-- Service Start -->
+<section id="main-container" class="main-container">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-7 text-center">
+                <div class="section-header">
+                    <h2 class="section-title">Register Coding Blocks JR</h2>
+                </div> <!-- Section Header End -->
+            </div> <!-- Col End -->
+        </div> <!-- Row end -->
+        <div class="row">
+            <div class="col-lg-5">
+                <form class="register-form" id="contact-form" action="#" method="POST">
+                    <div class="error-container"></div>
+                    <div class="row">
+                        <div class="form-group row">
+                            <label class="col-md-4 control-label" style="padding-top: 15px;"><b>Mobile No</b><span class="required"> * </span> </label>
+                            <div class="col-md-8">
+                                <input type="text" id="user_mobile_no" name="user_mobile_no" class="form-control positive-integer" placeholder="mobile" disabled="">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-md-4 control-label" style="padding-top: 15px;"><b>First Name</b><span class="required"> * </span> </label>
+                            <div class="col-md-8">
+                                <input type="text" id="firstname" name="firstname" class="form-control" placeholder="firstname">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-md-4 control-label" style="padding-top: 15px;"><b>Last Name</b><span class="required"> * </span> </label>
+                            <div class="col-md-8">
+                                <input type="text" id="lastname" name="lastname" class="form-control" placeholder="lastname">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-md-4 control-label" style="padding-top: 15px;"><b>Email Id</b><span class="required"> * </span> </label>
+                            <div class="col-md-8">
+                                <input class="form-control form-email" id="email" name="email" placeholder="Your Email" type="email" required="">
+                            </div>
+                        </div>
+                    </div><!-- Form row end-->
+                    <div>
+                        <button class="btn btn-primary" id="registerBtn" type="button">Register</button>
+                    </div>
+                </form> <!-- form end -->
+            </div> <!-- col end -->
+        </div> <!-- row end -->
+    </div> <!-- container end -->
+</section>
+
+<% content_for :javascript_includes do %>
+<%= javascript_include_tag 'add_user.js' %>
+<% end %>

@@ -1,0 +1,47 @@
+<%= include_gon %>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CodingblocksJr</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'animate.css', 'icofonts.css', 'select2.min.css', 'magnific-popup.css', 'owl.carousel.min.css',
+        'bootstrap.min.css', 'style.css', 'responsive.css'  %>
+    <style>
+        .no-js #loader { display: none;  }
+        .js #loader { display: block; position: absolute; left: 100px; top: 0; }
+        .se-pre-con {
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: 9999;
+            background: url(<%= asset_path 'preloader.gif'%>) center no-repeat #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <% unless controller.controller_name == 'users' %>
+        <%= render 'navbar'%>
+    <%end%>
+    <%= render 'header'%>
+    <div class="se-pre-con"></div>
+    <%= yield %>
+    <%= render 'login_modal'%>
+    <%= render 'footer'%>
+    <%= javascript_include_tag 'jquery.js', 'popper.min.js', 'bootstrap.min.js', 'owl.carousel.min.js', 'waypoint.js', 'jquery.counterup.js', 'jquery.magnific-popup.min.js', 'isotope.pkgd.min.js', 'smoothscroll.js', 'select2.min.js', 'parallax.min.js', 'countdown.js', 'wow.min.js', 'main.js', 'login.js'%>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery.numeric@1.0.0/jquery.numeric.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.4/qs.min.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+
+    <%= yield :javascript_includes %>
+
+</body>
+
+</html>

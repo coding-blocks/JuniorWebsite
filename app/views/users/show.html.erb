@@ -1,0 +1,69 @@
+<section id="tl-service" class="tl-service bg-solid">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-7 text-center">
+                <div class="section-header wow fadeIn">
+                    <h2 class="section-title">PROFILE DETAILS</h2>
+                </div> <!-- Section Header End -->
+            </div> <!-- Col End -->
+        </div> <!-- Row End -->
+        <div class="row">
+            <div class="col-lg-5 wow zoomIn" data-wow-delay=".1s">
+                <div class="single-service-box">
+                    <div class="service-header color-green">
+                        <img src="<%= asset_path 'course/mentor.png'%>" alt="">
+                        <h3 class="service-title">Username</h3>
+                    </div> <!-- Service Header end -->
+                    <h6 class="service-desc ml-5" id="username"></h6>
+                </div> <!-- Single Service end -->
+            </div> <!-- Col End -->
+            <div class="col-lg-2"></div>
+            <div class="col-lg-5 wow zoomIn" data-wow-delay=".3s">
+                <div class="single-service-box">
+                    <div class="service-header color-yellow">
+                        <img src="<%= asset_path 'course/firstName.png'%>" alt="">
+                        <h3 class="service-title">First Name</h3>
+                    </div> <!-- Service Header end -->
+                    <h6 class="service-desc ml-5" id="firstname"></h6>
+                </div> <!-- Single Service end -->
+            </div> <!-- Col End -->
+        </div> <!-- Row End -->
+        <div class="gap-30"></div>
+        <div class="row">
+            <div class="col-lg-5 wow zoomIn" data-wow-delay=".5s">
+                <div class="single-service-box">
+                    <div class="service-header color-orange">
+                        <img src="<%= asset_path 'course/lastName.png'%>" alt="">
+                        <h3 class="service-title">Last Name</h3>
+                    </div> <!-- Service Header end -->
+                    <h6 class="service-desc ml-5" id="lastname"></h6>
+                </div> <!-- Single Service end -->
+            </div> <!-- Col End -->
+            <div class="col-lg-2"></div>
+            <div class="col-lg-5 wow zoomIn" data-wow-delay=".7s">
+                <div class="single-service-box">
+                    <div class="service-header color-orange">
+                        <img src="<%= asset_path 'course/email.jpg'%>" alt="">
+                        <h3 class="service-title">Email</h3>
+                    </div> <!-- Service Header end -->
+                    <h6 class="service-desc ml-5" id="email"></h6>
+                </div> <!-- Single Service end -->
+            </div> <!-- Col End -->
+        </div> <!-- Row End -->
+        <div class="row">
+            <div class="col-lg-5 offset-4 wow zoomIn" style="margin-top: 25px">
+                <div class="single-service-box">
+                    <div class="service-header color-orange">
+                        <img src="<%= asset_path 'course/email.jpg'%>" alt="">
+                        <h3 class="service-title">Favourite Courses</h3>
+                    </div> <!-- Service Header end -->
+                    <h6 class="service-desc ml-5" id="course_choices"></h6>
+                </div> <!-- Single Service end -->
+            </div>
+        </div>
+    </div> <!-- Container end -->
+</section>
+
+<% content_for :javascript_includes do %>
+    <%= javascript_include_tag 'users.js' %>
+<% end %>
