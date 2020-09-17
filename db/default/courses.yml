@@ -1,0 +1,66 @@
+- name: Block Programming
+  description: Grades 2-6
+  start_date: DateTime.strptime("08/01/2020", "%m/%d/%Y")
+  code: 'BLKP'
+  fee: 0
+
+- name: Robotics
+  description: Grades 6-10
+  start_date: DateTime.strptime("08/29/2020", "%m/%d/%Y")
+  code: 'RBTS'
+  fee: 0
+
+- name: App Development
+  description: Grades 6-10
+  start_date: DateTime.strptime("09/29/2020", "%m/%d/%Y")
+  code: 'APPD'
+  fee: 0
+
+- name: Github
+  description: Grades 6-10
+  start_date: DateTime.strptime("09/27/2020", "%m/%d/%Y")
+  code: 'GTHB'
+  fee: 0
+
+- name: Web Development
+  description: Grades 7-10
+  start_date: DateTime.strptime("08/22/2020", "%m/%d/%Y")
+  code: 'WEBD'
+  fee: 0
+
+- name: C++ for Class XI
+  description: Grade 11
+  start_date: DateTime.strptime("09/29/2020", "%m/%d/%Y")
+  code: 'CPP11'
+  fee: 0
+
+- name: C++ for XI
+  description: Grade 12
+  start_date: DateTime.strptime("09/26/2020", "%m/%d/%Y")
+  code: 'CPP12'
+  fee: 0
+
+- name: Python for Class XI
+  description: Grade1 11
+  start_date: DateTime.strptime("09/29/2020", "%m/%d/%Y")
+  code: 'PY11'
+  fee: 0
+
+- name: Python for Class XII
+  description: Grade 12
+  start_date: DateTime.strptime("09/26/2020", "%m/%d/%Y")
+  code: 'PY12'
+  fee: 0
+
+- name: Pyhton(English)
+  description: Grades 7-10
+  start_date: DateTime.strptime("09/24/2020", "%m/%d/%Y")
+  code: 'PYTE'
+  fee: 0
+
+- name: Game Dev using Pyhton
+  description: Grades 7-10
+  start_date: DateTime.strptime("09/27s/2020", "%m/%d/%Y")
+  code: 'GDUP'
+  fee: 0             
+
