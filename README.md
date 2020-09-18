@@ -1,5 +1,3 @@
-# README
-
 # CODING BLOCKS JR 
 > Coding blocks junior web application developed using Ruby on Rails
 
