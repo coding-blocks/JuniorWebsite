@@ -6,10 +6,10 @@
 ## Prerequisites 
 
 The setup steps expect following to be installed on the system.
-- [Git] (https://git-scm.com/)
-- [Ruby 2.5.3] (https://www.ruby-lang.org/en/)
-- [Mysql >= 0.4.4', '< 0.6.0] (https://www.mysql.com/)
-- [Bundler] (https://bundler.io/)
+- [Git](https://git-scm.com/)
+- [Ruby 2.5.3](https://www.ruby-lang.org/en/)
+- [Mysql >= 0.4.4', '< 0.6.0](https://www.mysql.com/)
+- [Bundler](https://bundler.io/)
 
 ## Installation
  > All the steps required to get started.
